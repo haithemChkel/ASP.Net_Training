@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WebForms_sample1/.vs/WebForms_sample1
+/WebForms_sample1/packages
+/WebForms_sample1/WebForms_sample1/bin
+/WebForms_sample1/WebForms_sample1/obj/Debug

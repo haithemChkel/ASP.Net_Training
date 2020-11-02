@@ -7,11 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebForms_sample1
+namespace WebForms_sample2.Linq
 {
 
 
-    public partial class _Default
+    public partial class SimpleQuery
     {
+
+        /// <summary>
+        /// lblbooks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblbooks;
     }
 }

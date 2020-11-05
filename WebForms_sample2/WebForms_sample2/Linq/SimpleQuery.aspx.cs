@@ -11,7 +11,7 @@ namespace WebForms_sample2.Linq
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Books> books = Books.GetBooks();
+            List<Book> books = Books.GetBooks();
             var booktitles = from b in books select b.Title;
             // or
             var booktitlesLamdha = books.Select(x => x.Title);             

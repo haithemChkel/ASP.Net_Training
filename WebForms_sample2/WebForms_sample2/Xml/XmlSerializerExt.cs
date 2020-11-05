@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -17,12 +18,14 @@ namespace WebForms_sample2.Xml
             try
             {
                 var xmlserializer = new XmlSerializer(typeof(T));
-                var stringWriter = new StringWriter();
-                using (var writer = XmlWriter.Create(stringWriter))
+                using (var stringWriter = new StringWriter())
                 {
-                    xmlserializer.Serialize(writer, value);
-                    return stringWriter.ToString();
-                }
+                    using (var writer = XmlWriter.Create(stringWriter))
+                    {
+                        xmlserializer.Serialize(writer, value);
+                        return stringWriter.ToString();
+                    }
+                }                
             }
             catch (Exception ex)
             {

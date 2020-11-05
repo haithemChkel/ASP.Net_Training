@@ -17,6 +17,11 @@
                 <h4>Change your account settings</h4>
                 <hr />
                 <dl class="dl-horizontal">
+                    <dt>UserName:</dt>
+                    <dd>
+                        <asp:TextBox ID="Txtb_UserName" runat="server"></asp:TextBox>
+                        <asp:Button ID="Btn_ChangeUserName" runat="server" Text="Button" OnClick="Btn_ChangeUserName_Click"/>
+                    </dd>
                     <dt>Password:</dt>
                     <dd>
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />

@@ -2,8 +2,10 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-  <div class="row">
-      <asp:GridView ID="gvUsers" runat="server" CssClass="table table-striped"></asp:GridView>
-  </div>
-
+    <div class="row">
+        <asp:GridView ID="gvUsers" runat="server" CssClass="table table-striped"></asp:GridView>
+    </div>
+    <div class="row">
+        <asp:GridView ID="GvRoles" runat="server" CssClass="table table-striped"></asp:GridView>
+    </div>
 </asp:Content>

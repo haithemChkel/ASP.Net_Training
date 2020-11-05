@@ -6,9 +6,9 @@ namespace WebForms_sample2.States
     public partial class HttpCookieSample : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {           
+        {
             //--------------- Fetching Cookie -------------------------//  
-            var co_val = Request.Cookies["student"].Value;
+            var co_val = Request.Cookies["student"]?.Value;
             Label1.Text = co_val;
         }
 

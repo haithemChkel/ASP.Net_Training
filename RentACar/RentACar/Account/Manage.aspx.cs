@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Owin;
-using RentACar.Models;
+using RentACar.Infra.DI;
+using RentACar.Services.Interfaces;
 
 namespace RentACar.Account
 {
@@ -35,6 +30,8 @@ namespace RentACar.Account
 
         protected void Page_Load()
         {
+            Txtb_UserName.Text = User.Identity.Name;
+
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
             HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
@@ -123,6 +120,13 @@ namespace RentACar.Account
             manager.SetTwoFactorEnabled(User.Identity.GetUserId(), true);
 
             Response.Redirect("/Account/Manage");
+        }
+
+        protected void Btn_ChangeUserName_Click(object sender, EventArgs e)
+        {
+            IUserService userService = Injector.Inject<IUserService>();
+            var user = userService.UpdateUserName(this.User.Identity.GetUserId(), Txtb_UserName.Text);
+            Txtb_UserName.Text = user.UserName;
         }
     }
 }

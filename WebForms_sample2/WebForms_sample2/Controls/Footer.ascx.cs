@@ -11,7 +11,6 @@ namespace WebForms_sample2.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

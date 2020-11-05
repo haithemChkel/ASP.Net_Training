@@ -11,7 +11,7 @@ namespace WebForms_sample1.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.ispostback_lbl.Text = IsPostBack ? "EST UN POSTBACK" : "EST GET QUERY";
         }
 
         protected void Save_btn_Click(object sender, EventArgs e)
@@ -21,7 +21,12 @@ namespace WebForms_sample1.User
             user.FirstName = FirstName_tb.Text;
             user.Gender = string.IsNullOrEmpty(Gender_RadioButtonList.SelectedValue) ? null : (Genders?)int.Parse(Gender_RadioButtonList.SelectedValue);
             AppUsers.AllUsers.Add(user);
-            Response.Redirect("UsersList.aspx", false);
+            //Response.Redirect("UsersList.aspx", false);
+        }
+
+        protected void LastName_tb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

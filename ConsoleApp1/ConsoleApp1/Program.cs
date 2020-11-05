@@ -61,7 +61,12 @@ namespace ConsoleApp1
             Console.ReadLine();
         }
 
-        static void ShowVehicule<T>(T vehicule) where T : Vehicle
+        static void ShowVehicule<T>(T vehicule) where T : Vehicle, new() 
+        {
+            Console.WriteLine("Vehicule of type {0}", vehicule.Brand);
+        }
+
+        static void ShowVehicule(Vehicle vehicule)
         {
             Console.WriteLine("Vehicule of type {0}", vehicule.Brand);
         }

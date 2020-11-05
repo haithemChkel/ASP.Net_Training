@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace WebForms_sample2.Controls
 {
@@ -12,6 +13,7 @@ namespace WebForms_sample2.Controls
         protected void Save_btn_Click(object sender, EventArgs e)
         {
             this.User_messsage.Text = $"Welcome {this.FirstName_tb.Text} :)";
+            Thread.Sleep(10000);
         }
     }
 }

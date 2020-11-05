@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
         public string Brand { get; set; }
     }

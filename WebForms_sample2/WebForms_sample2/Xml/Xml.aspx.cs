@@ -10,7 +10,7 @@ namespace WebForms_sample2.Xml
         {
             if (!this.IsPostBack)
             {
-                this.TextBox1.Text = AppUsers.AllUsers.Serialize<Users>().Replace("<user",Environment.NewLine + "<user");
+                this.TextBox1.Text = AppUsers.AllUsers.Serialize<Users>();
             }
         }
 

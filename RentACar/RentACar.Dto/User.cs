@@ -1,14 +1,10 @@
 ﻿using PetaPoco;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace RentACar.Models
+namespace RentACar.Dto
 {
     [TableName("AspNetUsers")]
     [PrimaryKey("Id")]
-    public class UserModel
+    public class User
     {
         public string Id { get; set; }
         public string Email { get; set; }

@@ -2,29 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/WebForms_sample1/.vs/WebForms_sample1
-/WebForms_sample1/packages
-/WebForms_sample1/WebForms_sample1/bin
-/WebForms_sample1/WebForms_sample1/obj/Debug
-/WebForms_sample2/.vs/WebForms_sample2
-/WebForms_sample2/packages
-/WebForms_sample2/WebForms_sample2/bin
-/WebForms_sample2/WebForms_sample2/obj/Debug
-/ConsoleApp1/ConsoleApp1/bin/Debug/netcoreapp3.1
-/ConsoleApp1/ConsoleApp1/obj
-/ConsoleApp1/.vs/ConsoleApp1
-/WebForms_Authentication/packages
-/WebForms_Authentication/.vs/WebForms_Authentication
-/WebForms_Authentication/WebForms_Authentication/bin/Release/Publish/bin
-/WebForms_Authentication/WebForms_Authentication/bin/roslyn
-/WebForms_Authentication/WebForms_Authentication/bin
-/WebForms_Authentication/WebForms_Authentication/obj
-/WebForms_sample2/WebForms_sample2/App_Data
-/WebForms_sample2/WebForms_sample2/obj/Release
-/WebForms_Authentication/WebForms_Authentication/App_Data
-/WebForms_sample2/WebForms_sample2/Properties/PublishProfiles/ASP-net-Samples - Web Deploy.pubxml.user
-/RentACar/.vs/RentACar
-/RentACar/packages
-/RentACar/RentACar/App_Data
-/RentACar/RentACar/bin
-/RentACar/RentACar/obj/Debug
+/**/.vs/**
+/**/packages
+**/*/bin/**
+/**/obj/**
+/**/App_Data/**

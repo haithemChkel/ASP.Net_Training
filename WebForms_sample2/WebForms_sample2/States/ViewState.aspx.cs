@@ -26,8 +26,8 @@ namespace WebForms_sample2.States
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblCounter.Text = counter.ToString();
             counter++;
+            lblCounter.Text = counter.ToString();
         }
 
         protected void btnIncrement_Click(object sender, EventArgs e)

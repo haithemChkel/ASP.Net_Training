@@ -38,7 +38,7 @@ namespace WebForms_sample2.States
 
         private void FetchingCookies(HttpCookieCollection cookies)
         {
-            if (cookies["computer"].Values.ToString() != null)
+            if (cookies["computer"]?.Values.ToString() != null)
             {
                 if (cookies["computer"]["apple"] != null)
                     Label2.Text += cookies["computer"]["apple"] + " ";

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace WebForms_sample2.States
 {
     public partial class SessionState : System.Web.UI.Page
     {
         String mystr;
+
 
         protected void Page_Load(object sender, EventArgs e)
         {

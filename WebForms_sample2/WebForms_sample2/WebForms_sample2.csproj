@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controls\Footer.ascx" />
+    <Content Include="Controls\Menu.ascx" />
     <Content Include="DownloadFile.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -135,6 +136,7 @@
     <Content Include="Linq\SimpleQuery.aspx" />
     <Content Include="Xml\Xml.aspx" />
     <None Include="Properties\PublishProfiles\ASP-net-Samples - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -183,6 +185,13 @@
     </Compile>
     <Compile Include="Controls\Footer.ascx.designer.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
     </Compile>
     <Compile Include="DownloadFile.aspx.cs">
       <DependentUpon>DownloadFile.aspx</DependentUpon>

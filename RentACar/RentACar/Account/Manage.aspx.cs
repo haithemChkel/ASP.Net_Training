@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -9,6 +10,11 @@ namespace RentACar.Account
 {
     public partial class Manage : System.Web.UI.Page
     {
+        private IUserService _userService;
+        public Manage()
+        {
+            _userService = Injector.Inject<IUserService>();
+        }
         protected string SuccessMessage
         {
             get;
@@ -30,7 +36,11 @@ namespace RentACar.Account
 
         protected void Page_Load()
         {
-            Txtb_UserName.Text = User.Identity.Name;
+            if (!IsPostBack)
+            {
+                var user =  _userService.GetById(this.User.Identity.GetUserId());
+                Txtb_UserName.Text = user.UserName;
+            }
 
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
@@ -124,9 +134,19 @@ namespace RentACar.Account
 
         protected void Btn_ChangeUserName_Click(object sender, EventArgs e)
         {
+
             IUserService userService = Injector.Inject<IUserService>();
             var user = userService.UpdateUserName(this.User.Identity.GetUserId(), Txtb_UserName.Text);
             Txtb_UserName.Text = user.UserName;
+
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+            var updatedUser = manager.FindById(User.Identity.GetUserId());
+            if (updatedUser != null)
+            {
+                signInManager.SignIn(updatedUser, isPersistent: false, rememberBrowser: false);
+                Response.Redirect("/Account/Manage");
+            }
         }
     }
 }

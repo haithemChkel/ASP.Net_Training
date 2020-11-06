@@ -11,10 +11,11 @@ namespace RentACar.Account
     public partial class Manage : System.Web.UI.Page
     {
         private IUserService _userService;
-        public Manage()
+        public Manage(IUserService serService) 
         {
-            _userService = Injector.Inject<IUserService>();
+            _userService = serService;
         }
+
         protected string SuccessMessage
         {
             get;
@@ -134,9 +135,7 @@ namespace RentACar.Account
 
         protected void Btn_ChangeUserName_Click(object sender, EventArgs e)
         {
-
-            IUserService userService = Injector.Inject<IUserService>();
-            var user = userService.UpdateUserName(this.User.Identity.GetUserId(), Txtb_UserName.Text);
+            var user = _userService.UpdateUserName(this.User.Identity.GetUserId(), Txtb_UserName.Text);
             Txtb_UserName.Text = user.UserName;
 
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();

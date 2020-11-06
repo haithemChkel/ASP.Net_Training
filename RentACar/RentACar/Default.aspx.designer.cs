@@ -15,21 +15,21 @@ namespace RentACar
     {
 
         /// <summary>
-        /// gvUsers control.
+        /// Btn_AddNewUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUsers;
+        protected global::System.Web.UI.WebControls.Button Btn_AddNewUser;
 
         /// <summary>
-        /// GvRoles control.
+        /// GvUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GvRoles;
+        protected global::System.Web.UI.WebControls.GridView GvUsers;
     }
 }

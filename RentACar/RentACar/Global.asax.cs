@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.WebFormsDependencyInjection.Unity;
+using RentACar.Infra.DI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +18,9 @@ namespace RentACar
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Unity.IUnityContainer container = this.AddUnity();
+            Registration.RegisterWithUnity(container, "DefaultConnection");
         }
     }
 }

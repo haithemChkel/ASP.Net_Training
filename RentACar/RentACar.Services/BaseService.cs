@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace RentACar.Services
 {
-    public class BusinessService<TEntity, TKey> : IBusinessService<TEntity, TKey>
+    public class BaseService<TEntity, TKey> : IBaseService<TEntity, TKey>
     {
         protected IRepository<TEntity, TKey> _repository;
 
-        public BusinessService(IRepository<TEntity, TKey> repository)
+        public BaseService(IRepository<TEntity, TKey> repository)
         {
             _repository = repository;
         }

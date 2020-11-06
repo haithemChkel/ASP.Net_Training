@@ -2,7 +2,7 @@
 
 namespace RentACar.Services.Interfaces
 {
-    public interface IBusinessService<TEntity, TKey>
+    public interface IBaseService<TEntity, TKey>
     {
         TEntity GetById(TKey id);
         IEnumerable<TEntity> GetAll();

@@ -45,9 +45,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PetaPoco, Version=6.0.459.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PetaPoco.Compiled.6.0.459\lib\net45\PetaPoco.dll</HintPath>
-    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -408,10 +405,6 @@
     <ProjectReference Include="..\RentACar.Services.Interfaces\RentACar.Services.Interfaces.csproj">
       <Project>{CC75B791-AF0F-4AF6-83CF-8CC21971645C}</Project>
       <Name>RentACar.Services.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RentACar.Services\RentACar.Services.csproj">
-      <Project>{492395FA-4C1A-4116-8F0C-65731A6842BB}</Project>
-      <Name>RentACar.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

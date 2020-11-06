@@ -54,9 +54,9 @@
       <Project>{3843FD41-152A-421C-9614-D4F339FD723B}</Project>
       <Name>RentACar.DataAccess.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RentACar.DataAccess\RentACar.DataAccess.csproj">
+    <ProjectReference Include="..\RentACar.DataAccess\RentACar.DataAccess.Imp.csproj">
       <Project>{18CCDF1C-1806-4F1B-AEA5-21DDEA2C910B}</Project>
-      <Name>RentACar.DataAccess</Name>
+      <Name>RentACar.DataAccess.Imp</Name>
     </ProjectReference>
     <ProjectReference Include="..\RentACar.Dto\RentACar.Dto.csproj">
       <Project>{ED6DFDAB-1594-4FF8-BD2D-4DE651955C63}</Project>
@@ -66,9 +66,9 @@
       <Project>{CC75B791-AF0F-4AF6-83CF-8CC21971645C}</Project>
       <Name>RentACar.Services.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RentACar.Services\RentACar.Services.csproj">
+    <ProjectReference Include="..\RentACar.Services\RentACar.Services.Imp.csproj">
       <Project>{492395FA-4C1A-4116-8F0C-65731A6842BB}</Project>
-      <Name>RentACar.Services</Name>
+      <Name>RentACar.Services.Imp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

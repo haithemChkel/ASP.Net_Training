@@ -1,14 +1,8 @@
 ﻿using RentACar.Dto;
 using RentACar.Infra.DI;
-using RentACar.Models;
 using RentACar.Services.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace RentACar
 {
@@ -24,7 +18,7 @@ namespace RentACar
                 this.gvUsers.DataBind();
             }
 
-            IBusinessService<Roles, int> rolesService = Injector.Inject<IBusinessService<Roles, int>>();
+            IBaseService<Roles, int> rolesService = Injector.Inject<IBaseService<Roles, int>>();
             if(rolesService != null)
             {
                 var roles = rolesService.GetAll();

@@ -4,10 +4,11 @@ using RentACar.Services.Interfaces;
 
 namespace RentACar.Services
 {
-    public class UserService : BusinessService<User, string>, IUserService
+    public class UserService : BaseService<User, string>, IUserService
     {
         public UserService(IRepository<User, string> repository) : base(repository)
-        {}
+        {
+        }
       
         public User UpdateUserName(string id, string newUserName)
         {

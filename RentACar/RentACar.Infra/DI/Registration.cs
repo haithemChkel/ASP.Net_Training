@@ -18,7 +18,7 @@ namespace RentACar.Infra.DI
             Injector.AddToStore(typeof(IRepository<User, string>), new Repository<User, string>(Injector.Inject<IDatabase>()));
             Injector.AddToStore(typeof(IRepository<Roles, int>), new Repository<Roles, int>(Injector.Inject<IDatabase>()));
             Injector.AddToStore(typeof(IUserService), new UserService(Injector.Inject<IRepository<User,string>>()));
-            Injector.AddToStore(typeof(IBusinessService<Roles, int>), new BusinessService<Roles, int>(Injector.Inject<IRepository<Roles, int>>()));
+            Injector.AddToStore(typeof(IBaseService<Roles, int>), new BaseService<Roles, int>(Injector.Inject<IRepository<Roles, int>>()));
         }
     }
 }
